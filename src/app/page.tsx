@@ -46,13 +46,13 @@ export default function Home() {
           loop
           muted
           playsInline
-          className="absolute inset-0 h-full w-full object-cover opacity-30"
+          className="absolute inset-0 h-full w-full object-cover opacity-60"
         >
           <source src="/videos/wireframe_hero_loop_smooth.mp4" type="video/mp4" />
         </video>
 
         {/* Dark overlay for better text contrast */}
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/80" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background/40 via-background/20 to-background/60" />
 
         <div className="relative z-10 mx-auto max-w-5xl text-center">
           <SectionReveal>
