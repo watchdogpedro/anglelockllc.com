@@ -63,7 +63,7 @@ export default function Home() {
 
           <SectionReveal delay={0.1}>
             <div className="flex items-center justify-center">
-              <h1 className="text-7xl font-black leading-none tracking-tight text-white md:text-9xl lg:text-[12rem] xl:text-[14rem]">
+              <h1 className="text-5xl font-black leading-none tracking-tight text-white md:text-6xl lg:text-[8.4rem] xl:text-[9.8rem]">
                 BREAK<span className="text-gradient">THROUGH</span>
               </h1>
             </div>
