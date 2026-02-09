@@ -54,7 +54,7 @@ export default function Home() {
         {/* Dark overlay for better text contrast */}
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background/40 via-background/20 to-background/60" />
 
-        <div className="relative z-10 mx-auto max-w-5xl text-center">
+        <div className="relative z-10 mx-auto w-full px-6 text-center">
           <SectionReveal>
             <p className="mb-6 text-sm tracking-[0.4em] text-accent uppercase">
               Patented Technology &middot; 100+ Global Patents
@@ -62,9 +62,11 @@ export default function Home() {
           </SectionReveal>
 
           <SectionReveal delay={0.1}>
-            <h1 className="text-center text-7xl font-black leading-none tracking-tight text-white md:text-9xl lg:text-[12rem] xl:text-[14rem]">
-              BREAK<span className="text-gradient">THROUGH</span>
-            </h1>
+            <div className="flex items-center justify-center">
+              <h1 className="text-7xl font-black leading-none tracking-tight text-white md:text-9xl lg:text-[12rem] xl:text-[14rem]">
+                BREAK<span className="text-gradient">THROUGH</span>
+              </h1>
+            </div>
           </SectionReveal>
 
           <SectionReveal delay={0.2}>
