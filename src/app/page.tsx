@@ -73,7 +73,7 @@ export default function Home() {
               We didn&apos;t improve T-slot aluminum.{" "}
               <span className="font-black text-white">We replaced it.</span>
             </p>
-            <p className="mx-auto mt-6 max-w-3xl text-lg font-bold leading-relaxed text-white md:text-xl lg:text-2xl">
+            <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-white md:text-xl lg:text-2xl">
               AngleLock is the world&apos;s first mechanically-locking structural
               aluminum framing system &mdash; stronger than steel connections, lighter
               than everything, and zero maintenance for life.
