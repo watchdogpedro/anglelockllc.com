@@ -40,9 +40,19 @@ export default function Home() {
     <main>
       {/* ========== HERO ========== */}
       <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 pt-20">
-        {/* Background gradient orbs */}
-        <div className="pointer-events-none absolute top-1/4 left-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/5 blur-[120px]" />
-        <div className="pointer-events-none absolute right-0 bottom-0 h-[400px] w-[400px] rounded-full bg-accent/3 blur-[100px]" />
+        {/* Background Video */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover opacity-30"
+        >
+          <source src="/videos/wireframe_hero_loop_smooth.mp4" type="video/mp4" />
+        </video>
+
+        {/* Dark overlay for better text contrast */}
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/80" />
 
         <div className="relative z-10 mx-auto max-w-5xl text-center">
           <SectionReveal>
