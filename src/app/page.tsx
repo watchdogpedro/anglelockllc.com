@@ -62,9 +62,8 @@ export default function Home() {
           </SectionReveal>
 
           <SectionReveal delay={0.1}>
-            <h1 className="text-7xl font-black leading-none tracking-tight text-white md:text-9xl lg:text-[12rem] xl:text-[14rem]">
-              BREAK
-              <span className="text-gradient">THROUGH</span>
+            <h1 className="text-center text-7xl font-black leading-none tracking-tight text-white md:text-9xl lg:text-[12rem] xl:text-[14rem]">
+              BREAK<span className="text-gradient">THROUGH</span>
             </h1>
           </SectionReveal>
 
