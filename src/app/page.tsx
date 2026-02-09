@@ -62,16 +62,16 @@ export default function Home() {
           </SectionReveal>
 
           <SectionReveal delay={0.1}>
-            <h1 className="text-6xl font-extrabold leading-none tracking-tight text-white md:text-8xl lg:text-9xl">
+            <h1 className="text-7xl font-black leading-none tracking-tight text-white md:text-9xl lg:text-[12rem] xl:text-[14rem]">
               BREAK
               <span className="text-gradient">THROUGH</span>
             </h1>
           </SectionReveal>
 
           <SectionReveal delay={0.2}>
-            <p className="mx-auto mt-8 max-w-2xl text-xl leading-relaxed text-silver md:text-2xl">
+            <p className="mx-auto mt-8 max-w-3xl text-2xl font-bold leading-tight text-silver md:text-3xl lg:text-4xl">
               We didn&apos;t improve T-slot aluminum.{" "}
-              <span className="font-semibold text-white">We replaced it.</span>
+              <span className="font-black text-white">We replaced it.</span>
             </p>
             <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-silver-dim">
               AngleLock is the world&apos;s first mechanically-locking structural
