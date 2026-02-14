@@ -20,85 +20,109 @@ import {
 export default function Home() {
   return (
     <main>
-      {/* ========== HERO - CLEAN & DATA-DRIVEN ========== */}
-      <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 pt-20">
+      {/* ========== HERO - SPLIT LAYOUT WITH IMAGE ========== */}
+      <section className="relative min-h-screen overflow-hidden pt-20">
         {/* Subtle technical grid background */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.03)_1px,transparent_1px)] bg-[size:64px_64px]" />
 
-        <div className="relative z-10 mx-auto max-w-5xl text-center">
-          <SectionReveal>
-            <p className="mb-6 text-sm tracking-[0.4em] text-accent uppercase">
-              Patented Technology • 150+ Global Patents
-            </p>
-          </SectionReveal>
+        <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-6">
+          <div className="grid items-center gap-12 lg:grid-cols-2">
+            {/* Left: Text Content */}
+            <div>
+              <SectionReveal>
+                <p className="mb-6 text-sm tracking-[0.4em] text-accent uppercase">
+                  Patented Technology • 150+ Global Patents
+                </p>
+              </SectionReveal>
 
-          <SectionReveal delay={0.1}>
-            <h1 className="text-4xl font-black leading-tight tracking-tight text-white md:text-5xl lg:text-6xl">
-              THE FIRST MECHANICAL-LOCK
-              <br />
-              <span className="text-gradient">ALUMINUM FRAMING SYSTEM</span>
-            </h1>
-          </SectionReveal>
+              <SectionReveal delay={0.1}>
+                <h1 className="text-4xl font-black leading-tight tracking-tight text-white md:text-5xl lg:text-6xl xl:text-7xl">
+                  THE FIRST
+                  <br />
+                  MECHANICAL-LOCK
+                  <br />
+                  <span className="text-gradient">ALUMINUM FRAMING</span>
+                </h1>
+              </SectionReveal>
 
-          <SectionReveal delay={0.2}>
-            <p className="mx-auto mt-8 max-w-3xl text-lg leading-relaxed text-silver md:text-xl">
-              Replacing 48 years of friction-based technology with patented
-              precision engineering that&apos;s <span className="font-bold text-white">7x stronger</span> and requires{" "}
-              <span className="font-bold text-white">zero maintenance</span>.
-            </p>
-          </SectionReveal>
+              <SectionReveal delay={0.2}>
+                <p className="mt-6 text-lg leading-relaxed text-silver md:text-xl">
+                  Replacing 48 years of friction-based technology with patented
+                  precision engineering that&apos;s{" "}
+                  <span className="font-bold text-white">7x stronger</span> and
+                  requires{" "}
+                  <span className="font-bold text-white">zero maintenance</span>
+                  .
+                </p>
+              </SectionReveal>
 
-          {/* Key Metrics */}
-          <SectionReveal delay={0.3}>
-            <div className="mx-auto mt-12 grid max-w-4xl grid-cols-2 gap-6 md:grid-cols-4">
-              <div className="rounded-xl border border-border bg-surface/50 p-6 backdrop-blur-sm">
-                <div className="text-3xl font-bold text-accent">150+</div>
-                <p className="mt-2 text-sm text-silver-dim">Global Patents</p>
-              </div>
-              <div className="rounded-xl border border-border bg-surface/50 p-6 backdrop-blur-sm">
-                <div className="text-3xl font-bold text-accent">7x</div>
-                <p className="mt-2 text-sm text-silver-dim">Stronger</p>
-              </div>
-              <div className="rounded-xl border border-border bg-surface/50 p-6 backdrop-blur-sm">
-                <div className="text-3xl font-bold text-accent">$3M</div>
-                <p className="mt-2 text-sm text-silver-dim">Revenue</p>
-              </div>
-              <div className="rounded-xl border border-border bg-surface/50 p-6 backdrop-blur-sm">
-                <div className="text-3xl font-bold text-accent">50%</div>
-                <p className="mt-2 text-sm text-silver-dim">YoY Growth</p>
-              </div>
+              {/* Key Metrics */}
+              <SectionReveal delay={0.3}>
+                <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
+                  <div className="rounded-lg border border-border bg-surface/50 p-4 backdrop-blur-sm">
+                    <div className="text-2xl font-bold text-accent">150+</div>
+                    <p className="mt-1 text-xs text-silver-dim">Patents</p>
+                  </div>
+                  <div className="rounded-lg border border-border bg-surface/50 p-4 backdrop-blur-sm">
+                    <div className="text-2xl font-bold text-accent">7x</div>
+                    <p className="mt-1 text-xs text-silver-dim">Stronger</p>
+                  </div>
+                  <div className="rounded-lg border border-border bg-surface/50 p-4 backdrop-blur-sm">
+                    <div className="text-2xl font-bold text-accent">$3M</div>
+                    <p className="mt-1 text-xs text-silver-dim">Revenue</p>
+                  </div>
+                  <div className="rounded-lg border border-border bg-surface/50 p-4 backdrop-blur-sm">
+                    <div className="text-2xl font-bold text-accent">50%</div>
+                    <p className="mt-1 text-xs text-silver-dim">Growth</p>
+                  </div>
+                </div>
+              </SectionReveal>
+
+              {/* Validated By */}
+              <SectionReveal delay={0.4}>
+                <p className="mt-6 text-xs text-silver-dim uppercase tracking-wider">
+                  Validated by industry leaders
+                </p>
+                <div className="mt-3 flex flex-wrap items-center gap-4 text-sm font-bold tracking-wider text-silver-dim/40">
+                  <span>DISNEY</span>
+                  <span>•</span>
+                  <span>TSMC</span>
+                  <span>•</span>
+                  <span>LAM RESEARCH</span>
+                  <span>•</span>
+                  <span>BOSTON DYNAMICS</span>
+                </div>
+              </SectionReveal>
+
+              <SectionReveal delay={0.5}>
+                <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+                  <a
+                    href="#investment"
+                    className="rounded-full bg-accent px-8 py-4 text-center text-sm font-semibold tracking-wider text-white uppercase transition-all hover:bg-accent-bright hover:shadow-lg hover:shadow-accent/25"
+                  >
+                    Investment Materials
+                  </a>
+                  <a
+                    href="#proof"
+                    className="rounded-full border border-border px-8 py-4 text-center text-sm font-semibold tracking-wider text-silver uppercase transition-all hover:border-silver-dim hover:text-white"
+                  >
+                    View Proof
+                  </a>
+                </div>
+              </SectionReveal>
             </div>
-          </SectionReveal>
 
-          {/* Validated By */}
-          <SectionReveal delay={0.4}>
-            <p className="mt-8 text-sm text-silver-dim">
-              Validated by industry leaders
-            </p>
-            <div className="mt-4 flex flex-wrap items-center justify-center gap-8 text-lg font-bold tracking-wider text-silver-dim/40">
-              <span>DISNEY</span>
-              <span>TSMC</span>
-              <span>LAM RESEARCH</span>
-              <span>BOSTON DYNAMICS</span>
-            </div>
-          </SectionReveal>
-
-          <SectionReveal delay={0.5}>
-            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <a
-                href="#investment"
-                className="rounded-full bg-accent px-8 py-4 text-sm font-semibold tracking-wider text-white uppercase transition-all hover:bg-accent-bright hover:shadow-lg hover:shadow-accent/25"
-              >
-                Investment Materials
-              </a>
-              <a
-                href="#proof"
-                className="rounded-full border border-border px-8 py-4 text-sm font-semibold tracking-wider text-silver uppercase transition-all hover:border-silver-dim hover:text-white"
-              >
-                View Proof
-              </a>
-            </div>
-          </SectionReveal>
+            {/* Right: Hero Image */}
+            <SectionReveal delay={0.2}>
+              <div className="relative">
+                <img
+                  src="/images/hero-anglelock-robot.png"
+                  alt="AngleLock precision engineering - robotic automation with aluminum framing system"
+                  className="w-full"
+                />
+              </div>
+            </SectionReveal>
+          </div>
         </div>
 
         {/* Scroll indicator */}
