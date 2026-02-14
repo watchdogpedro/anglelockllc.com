@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Download, CheckCircle2, ArrowRight, FileText } from "lucide-react";
+import Book3D from "./Book3D";
 
 export default function LeadCapture() {
   const [email, setEmail] = useState("");
@@ -79,7 +80,7 @@ export default function LeadCapture() {
 
   return (
     <div className="rounded-2xl border border-border bg-surface p-8 md:p-12">
-      <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
+      <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:gap-12 items-center">
         {/* Left: Report Preview */}
         <div>
           <div className="flex items-center gap-3">
@@ -144,8 +145,8 @@ export default function LeadCapture() {
           </div>
         </div>
 
-        {/* Right: Email Capture Form */}
-        <div className="flex flex-col justify-center">
+        {/* Center: Email Capture Form */}
+        <div className="flex flex-col justify-center lg:order-2">
           <h4 className="text-lg font-semibold text-white">
             Download Full Report
           </h4>
@@ -238,6 +239,11 @@ export default function LeadCapture() {
               communications from AngleLock.
             </p>
           </form>
+        </div>
+
+        {/* Right: 3D Book */}
+        <div className="hidden lg:block lg:order-3">
+          <Book3D />
         </div>
       </div>
     </div>
