@@ -17,14 +17,25 @@ export default function LeadCapture() {
     setError("");
 
     try {
-      // TODO: Replace with actual email service (Mailchimp, ConvertKit, etc.)
-      // For now, we'll simulate submission and trigger download
+      // Send data to Google Sheets via Apps Script
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbyj2iM0KJ2oB6-_S7q9JC7PtzAot9HJgnw5PxXPIECXHWbfvp1RrTqkh92JH4FpY0cQQg/exec",
+        {
+          method: "POST",
+          mode: "no-cors", // Required for Google Apps Script
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name,
+            email,
+            company,
+          }),
+        }
+      );
 
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-
-      // Log to console (replace with actual API call)
-      console.log("Lead captured:", { name, email, company });
+      // Note: no-cors mode means we can't read the response,
+      // but the data will still be saved to Google Sheets
 
       // Trigger PDF download
       const link = document.createElement("a");
