@@ -1,6 +1,7 @@
 import AnimatedCounter from "@/components/AnimatedCounter";
 import SectionReveal from "@/components/SectionReveal";
 import IndustryCarousel from "@/components/IndustryCarousel";
+import LeadCapture from "@/components/LeadCapture";
 import {
   Shield,
   Zap,
@@ -691,6 +692,36 @@ export default function Home() {
           </SectionReveal>
         </div>
       </section>
+
+      <div className="section-divider" />
+
+      {/* ========== LEAD CAPTURE - MARKET REPORT ========== */}
+      <section className="py-32 px-6">
+        <div className="mx-auto max-w-6xl">
+          <SectionReveal>
+            <p className="text-center text-sm tracking-[0.4em] text-accent uppercase">
+              Investment Materials
+            </p>
+            <h2 className="mt-4 text-center text-4xl font-bold leading-tight text-white md:text-5xl">
+              Download Market
+              <br />
+              <span className="text-gradient">Opportunity Report</span>
+            </h2>
+            <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-relaxed text-silver-dim">
+              Get comprehensive analysis of the $47B market opportunity,
+              competitive landscape, and financial projections.
+            </p>
+          </SectionReveal>
+
+          <SectionReveal delay={0.1}>
+            <div className="mt-12">
+              <LeadCapture />
+            </div>
+          </SectionReveal>
+        </div>
+      </section>
+
+      <div className="section-divider" />
 
       {/* ========== CONTACT ========== */}
       <section className="py-32 px-6">
