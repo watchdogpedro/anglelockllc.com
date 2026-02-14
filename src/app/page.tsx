@@ -1,100 +1,100 @@
 import AnimatedCounter from "@/components/AnimatedCounter";
 import SectionReveal from "@/components/SectionReveal";
+import IndustryCarousel from "@/components/IndustryCarousel";
 import {
-  Rocket,
   Shield,
   Zap,
   Target,
   Factory,
-  Cpu,
-  Satellite,
-  Syringe,
-  Sun,
-  Radio,
-  Server,
   Building2,
-  Droplets,
-  Wrench,
   ArrowRight,
   Quote,
   ExternalLink,
+  CheckCircle2,
+  TrendingUp,
+  Award,
+  Users,
 } from "lucide-react";
-
-const industries = [
-  { icon: Satellite, name: "Space & Aerospace", desc: "Satellite assembly, engine stands, flight fixtures" },
-  { icon: Shield, name: "Military & Defense", desc: "Tactical platforms, weapons systems, field-deployable structures" },
-  { icon: Cpu, name: "Semiconductor", desc: "Fab equipment, wafer handling, Class 1 cleanrooms" },
-  { icon: Server, name: "AI & Data Centers", desc: "Server racks, cooling infrastructure, cable management" },
-  { icon: Syringe, name: "Life Sciences & Medical", desc: "Cleanroom frames, bioprocessing, lab equipment" },
-  { icon: Factory, name: "Robotics & Automation", desc: "Robot cells, cobot mounts, AGV frames, guarding" },
-  { icon: Sun, name: "Solar & Energy", desc: "Panel mounting, inverter frames, grid infrastructure" },
-  { icon: Droplets, name: "Oil & Gas", desc: "Platform structures, equipment frames, harsh environments" },
-  { icon: Building2, name: "Commercial Construction", desc: "Modular structures, facades, interior framing" },
-  { icon: Radio, name: "Communications", desc: "Tower structures, antenna mounts, equipment enclosures" },
-  { icon: Wrench, name: "Industrial Manufacturing", desc: "Machine bases, workstations, material handling" },
-  { icon: Rocket, name: "Next-Gen Construction", desc: "Replacing welded steel and outdated T-slot everywhere" },
-];
 
 export default function Home() {
   return (
     <main>
-      {/* ========== HERO ========== */}
+      {/* ========== HERO - CLEAN & DATA-DRIVEN ========== */}
       <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 pt-20">
-        {/* Background Video */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 h-full w-full object-cover opacity-60"
-        >
-          <source src="/videos/wireframe_hero_loop_smooth.mp4" type="video/mp4" />
-        </video>
+        {/* Subtle technical grid background */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.03)_1px,transparent_1px)] bg-[size:64px_64px]" />
 
-        {/* Dark overlay for better text contrast */}
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background/40 via-background/20 to-background/60" />
-
-        <div className="relative z-10 mx-auto w-full px-6 text-center">
+        <div className="relative z-10 mx-auto max-w-5xl text-center">
           <SectionReveal>
             <p className="mb-6 text-sm tracking-[0.4em] text-accent uppercase">
-              Patented Technology &middot; 100+ Global Patents
+              Patented Technology • 150+ Global Patents
             </p>
           </SectionReveal>
 
           <SectionReveal delay={0.1}>
-            <div className="flex items-center justify-center">
-              <h1 className="text-5xl font-black leading-none tracking-tight text-white md:text-6xl lg:text-[8.4rem] xl:text-[9.8rem]">
-                BREAK<span className="text-gradient">THROUGH</span>
-              </h1>
-            </div>
+            <h1 className="text-4xl font-black leading-tight tracking-tight text-white md:text-5xl lg:text-6xl">
+              THE FIRST MECHANICAL-LOCK
+              <br />
+              <span className="text-gradient">ALUMINUM FRAMING SYSTEM</span>
+            </h1>
           </SectionReveal>
 
           <SectionReveal delay={0.2}>
-            <p className="mx-auto mt-8 max-w-3xl text-2xl font-bold leading-tight md:text-3xl lg:text-4xl">
-              <span className="text-accent">We didn&apos;t improve T-slot aluminum.</span>
-              <br />
-              <span className="font-black text-white text-3xl md:text-4xl lg:text-5xl">We replaced it.</span>
-            </p>
-            <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-white md:text-xl lg:text-2xl">
-              AngleLock is the world&apos;s first mechanically-locking structural
-              aluminum framing system &mdash; stronger than steel connections, lighter
-              than everything, and zero maintenance for life.
+            <p className="mx-auto mt-8 max-w-3xl text-lg leading-relaxed text-silver md:text-xl">
+              Replacing 48 years of friction-based technology with patented
+              precision engineering that&apos;s <span className="font-bold text-white">7x stronger</span> and requires{" "}
+              <span className="font-bold text-white">zero maintenance</span>.
             </p>
           </SectionReveal>
 
+          {/* Key Metrics */}
           <SectionReveal delay={0.3}>
+            <div className="mx-auto mt-12 grid max-w-4xl grid-cols-2 gap-6 md:grid-cols-4">
+              <div className="rounded-xl border border-border bg-surface/50 p-6 backdrop-blur-sm">
+                <div className="text-3xl font-bold text-accent">150+</div>
+                <p className="mt-2 text-sm text-silver-dim">Global Patents</p>
+              </div>
+              <div className="rounded-xl border border-border bg-surface/50 p-6 backdrop-blur-sm">
+                <div className="text-3xl font-bold text-accent">7x</div>
+                <p className="mt-2 text-sm text-silver-dim">Stronger</p>
+              </div>
+              <div className="rounded-xl border border-border bg-surface/50 p-6 backdrop-blur-sm">
+                <div className="text-3xl font-bold text-accent">$3M</div>
+                <p className="mt-2 text-sm text-silver-dim">Revenue</p>
+              </div>
+              <div className="rounded-xl border border-border bg-surface/50 p-6 backdrop-blur-sm">
+                <div className="text-3xl font-bold text-accent">50%</div>
+                <p className="mt-2 text-sm text-silver-dim">YoY Growth</p>
+              </div>
+            </div>
+          </SectionReveal>
+
+          {/* Validated By */}
+          <SectionReveal delay={0.4}>
+            <p className="mt-8 text-sm text-silver-dim">
+              Validated by industry leaders
+            </p>
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-8 text-lg font-bold tracking-wider text-silver-dim/40">
+              <span>DISNEY</span>
+              <span>TSMC</span>
+              <span>LAM RESEARCH</span>
+              <span>BOSTON DYNAMICS</span>
+            </div>
+          </SectionReveal>
+
+          <SectionReveal delay={0.5}>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
-                href="#technology"
+                href="#investment"
                 className="rounded-full bg-accent px-8 py-4 text-sm font-semibold tracking-wider text-white uppercase transition-all hover:bg-accent-bright hover:shadow-lg hover:shadow-accent/25"
               >
-                See the Technology
+                Investment Materials
               </a>
               <a
-                href="#contact"
+                href="#proof"
                 className="rounded-full border border-border px-8 py-4 text-sm font-semibold tracking-wider text-silver uppercase transition-all hover:border-silver-dim hover:text-white"
               >
-                Investor Inquiry
+                View Proof
               </a>
             </div>
           </SectionReveal>
@@ -108,180 +108,177 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ========== STATS BAR ========== */}
-      <section className="border-y border-border bg-surface py-16">
-        <div className="mx-auto grid max-w-5xl grid-cols-2 gap-8 px-6 md:grid-cols-4">
-          <AnimatedCounter end={100} suffix="+" label="Global Patents" />
-          <AnimatedCounter end={14} suffix="x" label="Stiffer than T-Slot" />
-          <AnimatedCounter end={10} suffix="x" label="Stronger Joints" />
-          <AnimatedCounter end={0} prefix="$" suffix="" label="Lifetime Maintenance" />
-        </div>
-      </section>
-
-      {/* ========== TECHNOLOGY ========== */}
-      <section id="technology" className="py-32 px-6">
-        <div className="mx-auto max-w-6xl">
-          <SectionReveal>
-            <p className="text-sm tracking-[0.4em] text-accent uppercase">
-              The Technology
-            </p>
-            <h2 className="mt-4 text-4xl font-bold leading-tight text-white md:text-5xl">
-              Five Planes of
-              <br />
-              <span className="text-gradient">Mechanical Lock</span>
-            </h2>
-          </SectionReveal>
-
-          <div className="mt-16 grid gap-12 md:grid-cols-2">
-            <SectionReveal>
-              <div className="space-y-8">
-                <div className="rounded-2xl border border-border bg-surface p-8">
-                  <h3 className="flex items-center gap-3 text-lg font-semibold text-white">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-red-500/10">
-                      <X className="h-5 w-5 text-red-400" />
-                    </div>
-                    T-Slot: Friction-Based (1970s)
-                  </h3>
-                  <ul className="mt-4 space-y-2 text-sm leading-relaxed text-silver-dim">
-                    <li>&bull; Relies on friction alone &mdash; loosens under vibration</li>
-                    <li>&bull; Pinned connections allow rotation</li>
-                    <li>&bull; Requires constant retightening ($600+/year)</li>
-                    <li>&bull; Barely evolved in 50 years</li>
-                  </ul>
-                </div>
-
-                <div className="glow-blue rounded-2xl border border-accent/20 bg-surface p-8">
-                  <h3 className="flex items-center gap-3 text-lg font-semibold text-white">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10">
-                      <Zap className="h-5 w-5 text-accent" />
-                    </div>
-                    AngleLock: Mechanically Locked
-                  </h3>
-                  <ul className="mt-4 space-y-2 text-sm leading-relaxed text-silver">
-                    <li>&bull; 5 angled contact planes create a mechanical lock</li>
-                    <li>&bull; Fixed connections resist translation AND rotation</li>
-                    <li>&bull; Self-tightens under vibration &mdash; bolts spring back</li>
-                    <li>&bull; Zero maintenance. Zero loosening. Ever.</li>
-                  </ul>
-                </div>
-              </div>
-            </SectionReveal>
-
-            <SectionReveal delay={0.2}>
-              <div className="space-y-6">
-                <ComparisonRow
-                  label="Stiffness (40x40mm)"
-                  old="0.024 in&sup4;"
-                  new_="0.343 in&sup4;"
-                  improvement="14x"
-                />
-                <ComparisonRow
-                  label="10-Year Total Cost"
-                  old="$5,650"
-                  new_="$477"
-                  improvement="92% less"
-                />
-                <ComparisonRow
-                  label="Assembly Speed"
-                  old="4-5 hours"
-                  new_="1-2 hours"
-                  improvement="2x faster"
-                />
-                <ComparisonRow
-                  label="Annual Maintenance"
-                  old="$600+/year"
-                  new_="$0/year"
-                  improvement="Zero"
-                />
-                <ComparisonRow
-                  label="Brackets Required"
-                  old="100% (baseline)"
-                  new_="50-75%"
-                  improvement="Fewer parts"
-                />
-
-                <div className="mt-8 rounded-xl border border-border bg-surface-light p-6">
-                  <p className="text-sm italic leading-relaxed text-silver-dim">
-                    &ldquo;If someone gift-wrapped you a free T-slot system,
-                    it&apos;d still cost more over its lifetime than a
-                    full-priced AngleLock assembly.&rdquo;
-                  </p>
-                </div>
-
-                <a
-                  href="https://anglelock.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm text-accent transition-colors hover:text-accent-bright"
-                >
-                  View detailed specs & testing data
-                  <ExternalLink className="h-4 w-4" />
-                </a>
-              </div>
-            </SectionReveal>
-          </div>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
-      {/* ========== OPPORTUNITY ========== */}
-      <section id="opportunity" className="py-32 px-6">
+      {/* ========== THE OPPORTUNITY ========== */}
+      <section className="border-y border-border bg-surface py-32 px-6">
         <div className="mx-auto max-w-6xl">
           <SectionReveal>
             <p className="text-sm tracking-[0.4em] text-accent uppercase">
               The Opportunity
             </p>
             <h2 className="mt-4 text-4xl font-bold leading-tight text-white md:text-5xl">
-              A $47 Billion
+              $47 Billion Market
               <br />
-              <span className="text-gradient">Revolution</span>
+              <span className="text-gradient">Stuck in 1976</span>
             </h2>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-silver-dim">
-              Everywhere T-slot, Unistrut, and welded steel are used today,
-              AngleLock replaces them with fewer parts, faster assembly, and
-              permanent strength. The addressable market spans every industry
-              that builds.
+            <p className="mt-6 max-w-3xl text-lg leading-relaxed text-silver-dim">
+              The entire aluminum framing industry relies on friction-based
+              connections invented nearly 50 years ago. We&apos;re replacing T-slot
+              everywhere with mechanically locking technology.
             </p>
           </SectionReveal>
 
-          <div className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {industries.map((industry, i) => (
-              <SectionReveal key={industry.name} delay={i * 0.05}>
-                <div className="group rounded-xl border border-border bg-surface p-6 transition-all hover:border-accent/30 hover:bg-surface-light">
-                  <industry.icon className="h-8 w-8 text-accent transition-transform group-hover:scale-110" />
-                  <h3 className="mt-4 text-sm font-semibold text-white">
-                    {industry.name}
-                  </h3>
-                  <p className="mt-1 text-xs leading-relaxed text-silver-dim">
-                    {industry.desc}
-                  </p>
+          <div className="mt-16 grid gap-8 md:grid-cols-3">
+            <SectionReveal>
+              <div className="rounded-2xl border border-border bg-surface-light p-8">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-red-500/10">
+                  <Shield className="h-6 w-6 text-red-400" />
                 </div>
-              </SectionReveal>
-            ))}
-          </div>
+                <h3 className="mt-6 text-lg font-semibold text-white">
+                  The Problem
+                </h3>
+                <ul className="mt-4 space-y-2 text-sm leading-relaxed text-silver-dim">
+                  <li>&bull; T-slot relies on friction alone</li>
+                  <li>&bull; Vibration causes loosening</li>
+                  <li>&bull; $600+/year maintenance</li>
+                  <li>&bull; No innovation since 1976</li>
+                </ul>
+              </div>
+            </SectionReveal>
 
+            <SectionReveal delay={0.1}>
+              <div className="glow-blue rounded-2xl border border-accent/20 bg-surface-light p-8">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10">
+                  <Zap className="h-6 w-6 text-accent" />
+                </div>
+                <h3 className="mt-6 text-lg font-semibold text-white">
+                  The Solution
+                </h3>
+                <ul className="mt-4 space-y-2 text-sm leading-relaxed text-silver">
+                  <li>&bull; 5-plane mechanical lock</li>
+                  <li>&bull; Self-tightens under load</li>
+                  <li>&bull; Zero maintenance forever</li>
+                  <li>&bull; 150+ patents protect it</li>
+                </ul>
+              </div>
+            </SectionReveal>
+
+            <SectionReveal delay={0.2}>
+              <div className="rounded-2xl border border-border bg-surface-light p-8">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10">
+                  <TrendingUp className="h-6 w-6 text-accent" />
+                </div>
+                <h3 className="mt-6 text-lg font-semibold text-white">
+                  The Result
+                </h3>
+                <ul className="mt-4 space-y-2 text-sm leading-relaxed text-silver-dim">
+                  <li>&bull; 7x stronger than T-slot</li>
+                  <li>&bull; 92% lower lifetime cost</li>
+                  <li>&bull; 2x faster assembly</li>
+                  <li>&bull; Growing 50% annually</li>
+                </ul>
+              </div>
+            </SectionReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ========== EXTREME TESTING ========== */}
+      <section id="proof" className="py-32 px-6">
+        <div className="mx-auto max-w-6xl">
           <SectionReveal>
-            <div className="mt-16 rounded-2xl border border-border bg-surface p-8 md:p-12">
-              <div className="grid gap-8 md:grid-cols-3">
-                <div>
-                  <div className="text-3xl font-bold text-accent">10.5%</div>
-                  <p className="mt-1 text-sm text-silver-dim">
-                    Industrial robotics CAGR through 2030
+            <p className="text-sm tracking-[0.4em] text-accent uppercase">
+              Extreme Testing
+            </p>
+            <h2 className="mt-4 text-4xl font-bold leading-tight text-white md:text-5xl">
+              We Don&apos;t Just Claim
+              <br />
+              <span className="text-gradient">Superior Strength</span>
+            </h2>
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-silver-dim">
+              We prove it.
+            </p>
+          </SectionReveal>
+
+          {/* Tank Test - Featured */}
+          <SectionReveal delay={0.1}>
+            <div className="mt-16 overflow-hidden rounded-2xl border border-accent/20 bg-surface glow-blue">
+              <div className="relative aspect-video w-full">
+                <img
+                  src="/images/tank-test.png"
+                  alt="52-ton M60 Patton tank on AngleLock aluminum structure"
+                  className="h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-8">
+                  <h3 className="text-2xl font-bold text-white md:text-3xl">
+                    52-Ton Tank Load Test
+                  </h3>
+                  <p className="mt-2 text-lg text-silver">
+                    M60 Patton battle tank driven onto AngleLock aluminum extrusion
                   </p>
+                  <div className="mt-4 flex items-center gap-4">
+                    <div className="rounded-full bg-accent/10 px-4 py-2">
+                      <span className="text-sm font-semibold text-accent">
+                        Result: Zero Deformation
+                      </span>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <div className="text-3xl font-bold text-accent">$52.7B</div>
-                  <p className="mt-1 text-sm text-silver-dim">
-                    CHIPS Act semiconductor investment
-                  </p>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-accent">23%</div>
-                  <p className="mt-1 text-sm text-silver-dim">
-                    Industry share of greenhouse gas emissions &mdash; aluminum is recyclable
-                  </p>
-                </div>
+              </div>
+            </div>
+          </SectionReveal>
+
+          {/* Industry Applications Carousel */}
+          <SectionReveal delay={0.2}>
+            <div className="mt-16">
+              <h3 className="text-center text-xl font-semibold text-white">
+                From Defense to Every Industry
+              </h3>
+              <p className="mt-2 text-center text-sm text-silver-dim">
+                The same strength engineering powers precision applications across 12 industries
+              </p>
+              <IndustryCarousel />
+            </div>
+          </SectionReveal>
+
+          {/* Additional Testing Data */}
+          <SectionReveal delay={0.3}>
+            <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              <div className="rounded-xl border border-border bg-surface p-6">
+                <h4 className="text-sm font-semibold tracking-wider text-white uppercase">
+                  Torsion Testing
+                </h4>
+                <div className="mt-3 text-3xl font-bold text-accent">7x</div>
+                <p className="mt-1 text-sm text-silver-dim">
+                  Stronger than T-slot
+                </p>
+              </div>
+              <div className="rounded-xl border border-border bg-surface p-6">
+                <h4 className="text-sm font-semibold tracking-wider text-white uppercase">
+                  Vibration Testing
+                </h4>
+                <div className="mt-3 text-3xl font-bold text-accent">Self-tightens</div>
+                <p className="mt-1 text-sm text-silver-dim">
+                  Competitors loosen
+                </p>
+              </div>
+              <div className="rounded-xl border border-border bg-surface p-6">
+                <h4 className="text-sm font-semibold tracking-wider text-white uppercase">
+                  Load Testing
+                </h4>
+                <div className="mt-3 text-3xl font-bold text-accent">8,000 lbs</div>
+                <p className="mt-1 text-sm text-silver-dim">
+                  Without deflection
+                </p>
+              </div>
+              <div className="rounded-xl border border-border bg-surface p-6">
+                <h4 className="text-sm font-semibold tracking-wider text-white uppercase">
+                  Fatigue Testing
+                </h4>
+                <div className="mt-3 text-3xl font-bold text-accent">10 years</div>
+                <p className="mt-1 text-sm text-silver-dim">
+                  Zero maintenance
+                </p>
               </div>
             </div>
           </SectionReveal>
@@ -290,67 +287,394 @@ export default function Home() {
 
       <div className="section-divider" />
 
-      {/* ========== THE INVENTOR ========== */}
-      <section id="inventor" className="py-32 px-6">
-        <div className="mx-auto max-w-4xl">
+      {/* ========== CUSTOMER VALIDATION ========== */}
+      <section className="py-32 px-6">
+        <div className="mx-auto max-w-6xl">
           <SectionReveal>
             <p className="text-sm tracking-[0.4em] text-accent uppercase">
-              The Inventor
+              Customer Validation
             </p>
             <h2 className="mt-4 text-4xl font-bold leading-tight text-white md:text-5xl">
-              Frank Oetlinger
+              Proven in Production
+            </h2>
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-silver-dim">
+              Major enterprises trust AngleLock for mission-critical applications
+            </p>
+          </SectionReveal>
+
+          {/* Customer Logos */}
+          <SectionReveal delay={0.1}>
+            <div className="mt-12 flex flex-wrap items-center justify-center gap-12 text-xl font-bold tracking-wider text-silver-dim/40 md:text-2xl">
+              <span>DISNEY</span>
+              <span>&middot;</span>
+              <span>TSMC</span>
+              <span>&middot;</span>
+              <span>LAM RESEARCH</span>
+              <span>&middot;</span>
+              <span>BOSTON DYNAMICS</span>
+              <span>&middot;</span>
+              <span>MILWAUKEE TOOL</span>
+              <span>&middot;</span>
+              <span>SNAP-ON</span>
+            </div>
+          </SectionReveal>
+
+          {/* Key Customer Highlight */}
+          <SectionReveal delay={0.2}>
+            <div className="mt-12 rounded-2xl border border-border bg-surface p-8 md:p-12">
+              <div className="text-2xl font-bold text-accent">$2M</div>
+              <p className="mt-2 text-sm text-silver-dim">
+                Annual revenue from Disney Studios alone
+              </p>
+            </div>
+          </SectionReveal>
+
+          {/* Testimonial */}
+          <SectionReveal delay={0.3}>
+            <div className="mt-8 rounded-2xl border border-accent/20 bg-surface p-8 glow-blue md:p-12">
+              <Quote className="h-10 w-10 text-accent/30" />
+              <blockquote className="mt-4 text-xl leading-relaxed text-white md:text-2xl">
+                &ldquo;AngleLock is without question the strongest, most stable,
+                and most versatile framing system in the business.&rdquo;
+              </blockquote>
+              <p className="mt-6 text-sm text-silver-dim">
+                <span className="font-semibold text-silver">
+                  Greg Gernert
+                </span>{" "}
+                &mdash; VP & GM, Rockwell Automation
+              </p>
+            </div>
+          </SectionReveal>
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
+      {/* ========== COMPETITIVE MOAT ========== */}
+      <section className="py-32 px-6">
+        <div className="mx-auto max-w-6xl">
+          <SectionReveal>
+            <p className="text-sm tracking-[0.4em] text-accent uppercase">
+              Competitive Advantage
+            </p>
+            <h2 className="mt-4 text-4xl font-bold leading-tight text-white md:text-5xl">
+              Protected Moat
+            </h2>
+          </SectionReveal>
+
+          <div className="mt-16 grid gap-8 md:grid-cols-3">
+            <SectionReveal>
+              <div className="rounded-2xl border border-border bg-surface p-8">
+                <Award className="h-10 w-10 text-accent" />
+                <h3 className="mt-6 text-2xl font-bold text-white">150+</h3>
+                <p className="mt-2 text-sm font-semibold text-silver">
+                  Global Patents
+                </p>
+                <ul className="mt-4 space-y-2 text-sm text-silver-dim">
+                  <li>&bull; US, Europe, Korea coverage</li>
+                  <li>&bull; Core lock mechanism</li>
+                  <li>&bull; Application variations</li>
+                  <li>&bull; Manufacturing methods</li>
+                </ul>
+              </div>
+            </SectionReveal>
+
+            <SectionReveal delay={0.1}>
+              <div className="rounded-2xl border border-border bg-surface p-8">
+                <Factory className="h-10 w-10 text-accent" />
+                <h3 className="mt-6 text-2xl font-bold text-white">10 Years</h3>
+                <p className="mt-2 text-sm font-semibold text-silver">
+                  Proven Operations
+                </p>
+                <ul className="mt-4 space-y-2 text-sm text-silver-dim">
+                  <li>&bull; $10M in debt-free equipment</li>
+                  <li>&bull; 30 employees</li>
+                  <li>&bull; Vertically integrated</li>
+                  <li>&bull; Production capacity ready</li>
+                </ul>
+              </div>
+            </SectionReveal>
+
+            <SectionReveal delay={0.2}>
+              <div className="rounded-2xl border border-border bg-surface p-8">
+                <Target className="h-10 w-10 text-accent" />
+                <h3 className="mt-6 text-2xl font-bold text-white">Strategic</h3>
+                <p className="mt-2 text-sm font-semibold text-silver">
+                  Acquisition Interest
+                </p>
+                <ul className="mt-4 space-y-2 text-sm text-silver-dim">
+                  <li>&bull; 8020 ($800M) attempted buy</li>
+                  <li>&bull; Validates technology threat</li>
+                  <li>&bull; Clear exit pathways</li>
+                  <li>&bull; Target: $50M valuation</li>
+                </ul>
+              </div>
+            </SectionReveal>
+          </div>
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
+      {/* ========== MARKET TIMING ========== */}
+      <section className="border-y border-border bg-surface py-32 px-6">
+        <div className="mx-auto max-w-6xl">
+          <SectionReveal>
+            <p className="text-sm tracking-[0.4em] text-accent uppercase">
+              Market Timing
+            </p>
+            <h2 className="mt-4 text-4xl font-bold leading-tight text-white md:text-5xl">
+              Convergence of
+              <br />
+              <span className="text-gradient">Growth Drivers</span>
+            </h2>
+          </SectionReveal>
+
+          <div className="mt-16 grid gap-8 md:grid-cols-3">
+            <SectionReveal>
+              <div className="rounded-xl border border-border bg-surface-light p-6">
+                <div className="text-3xl font-bold text-accent">$52.7B</div>
+                <p className="mt-2 text-sm font-semibold text-white">
+                  CHIPS Act Investment
+                </p>
+                <p className="mt-1 text-xs text-silver-dim">
+                  Semiconductor fabs require precision framing for cleanrooms
+                  and equipment
+                </p>
+              </div>
+            </SectionReveal>
+
+            <SectionReveal delay={0.1}>
+              <div className="rounded-xl border border-border bg-surface-light p-6">
+                <div className="text-3xl font-bold text-accent">10.5%</div>
+                <p className="mt-2 text-sm font-semibold text-white">
+                  Robotics CAGR
+                </p>
+                <p className="mt-1 text-xs text-silver-dim">
+                  Industrial automation buildout through 2030 drives demand for
+                  robot cells
+                </p>
+              </div>
+            </SectionReveal>
+
+            <SectionReveal delay={0.2}>
+              <div className="rounded-xl border border-border bg-surface-light p-6">
+                <div className="text-3xl font-bold text-accent">Reshoring</div>
+                <p className="mt-2 text-sm font-semibold text-white">
+                  US/Europe Manufacturing
+                </p>
+                <p className="mt-1 text-xs text-silver-dim">
+                  New facility construction requires structural framing systems
+                </p>
+              </div>
+            </SectionReveal>
+          </div>
+
+          <SectionReveal delay={0.3}>
+            <div className="mt-12 rounded-2xl border border-border bg-surface p-8">
+              <h3 className="text-lg font-semibold text-white">
+                12 Target Industries
+              </h3>
+              <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                {[
+                  "Aerospace & Defense",
+                  "Semiconductor Manufacturing",
+                  "Medical & Life Sciences",
+                  "Industrial Robotics",
+                  "Commercial Construction",
+                  "AI & Data Centers",
+                  "Solar & Energy",
+                  "Oil & Gas",
+                  "Communications",
+                  "Automotive",
+                  "Entertainment Production",
+                  "General Manufacturing",
+                ].map((industry) => (
+                  <div
+                    key={industry}
+                    className="flex items-center gap-2 text-sm text-silver-dim"
+                  >
+                    <CheckCircle2 className="h-4 w-4 text-accent" />
+                    {industry}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </SectionReveal>
+        </div>
+      </section>
+
+      {/* ========== THE INVESTMENT ========== */}
+      <section id="investment" className="py-32 px-6">
+        <div className="mx-auto max-w-4xl">
+          <SectionReveal>
+            <p className="text-center text-sm tracking-[0.4em] text-accent uppercase">
+              The Investment
+            </p>
+            <h2 className="mt-4 text-center text-4xl font-bold leading-tight text-white md:text-5xl">
+              Growth Capital Round
             </h2>
           </SectionReveal>
 
           <SectionReveal delay={0.1}>
-            <div className="mt-12 rounded-2xl border border-border bg-surface p-8 md:p-12">
-              <div className="space-y-6 text-base leading-relaxed text-silver">
+            <div className="mt-16 rounded-2xl border border-accent/20 bg-surface p-8 glow-blue md:p-12">
+              <div className="grid gap-8 md:grid-cols-2">
+                <div>
+                  <h3 className="text-sm font-semibold tracking-wider text-white uppercase">
+                    Raising
+                  </h3>
+                  <div className="mt-2 text-4xl font-bold text-accent">
+                    $10 Million
+                  </div>
+                  <p className="mt-2 text-sm text-silver-dim">
+                    Growth capital (10 years operational, not startup)
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-sm font-semibold tracking-wider text-white uppercase">
+                    Current Traction
+                  </h3>
+                  <ul className="mt-3 space-y-2 text-sm text-silver-dim">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-accent" />
+                      $3M annual revenue
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-accent" />
+                      50% year-over-year growth
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-accent" />
+                      Major customer contracts
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-accent" />
+                      Path to $50M valuation
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="section-divider my-8" />
+
+              <div>
+                <h3 className="text-sm font-semibold tracking-wider text-white uppercase">
+                  Use of Funds
+                </h3>
+                <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                  <div className="rounded-lg border border-border bg-background p-4">
+                    <h4 className="text-sm font-semibold text-white">
+                      Facility Expansion
+                    </h4>
+                    <p className="mt-1 text-xs text-silver-dim">
+                      Increase production capacity for growing demand
+                    </p>
+                  </div>
+                  <div className="rounded-lg border border-border bg-background p-4">
+                    <h4 className="text-sm font-semibold text-white">
+                      Equipment
+                    </h4>
+                    <p className="mt-1 text-xs text-silver-dim">
+                      3 CNC machining centers for vertically integrated
+                      production
+                    </p>
+                  </div>
+                  <div className="rounded-lg border border-border bg-background p-4">
+                    <h4 className="text-sm font-semibold text-white">
+                      Marketing
+                    </h4>
+                    <p className="mt-1 text-xs text-silver-dim">
+                      Replicate Vention&apos;s $125M marketing playbook
+                    </p>
+                  </div>
+                  <div className="rounded-lg border border-border bg-background p-4">
+                    <h4 className="text-sm font-semibold text-white">
+                      Headcount
+                    </h4>
+                    <p className="mt-1 text-xs text-silver-dim">
+                      Sales, engineering, and operations team expansion
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </SectionReveal>
+
+          {/* Download Materials */}
+          <SectionReveal delay={0.2}>
+            <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+              <a
+                href="mailto:info@anglelock.com?subject=Investment%20Materials%20Request"
+                className="w-full rounded-full bg-accent px-8 py-4 text-center text-sm font-semibold tracking-wider text-white uppercase transition-all hover:bg-accent-bright hover:shadow-lg hover:shadow-accent/25 sm:w-auto"
+              >
+                Request Investor Deck
+              </a>
+              <a
+                href="mailto:info@anglelock.com?subject=Confidential%20Investment%20Inquiry"
+                className="w-full rounded-full border border-border px-8 py-4 text-center text-sm font-semibold tracking-wider text-silver uppercase transition-all hover:border-silver-dim hover:text-white sm:w-auto"
+              >
+                Schedule Call
+              </a>
+            </div>
+          </SectionReveal>
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
+      {/* ========== TEAM ========== */}
+      <section className="border-y border-border bg-surface py-32 px-6">
+        <div className="mx-auto max-w-4xl">
+          <SectionReveal>
+            <p className="text-sm tracking-[0.4em] text-accent uppercase">
+              Leadership
+            </p>
+            <h2 className="mt-4 text-4xl font-bold leading-tight text-white md:text-5xl">
+              The Inventor
+            </h2>
+          </SectionReveal>
+
+          <SectionReveal delay={0.1}>
+            <div className="mt-12 rounded-2xl border border-border bg-surface-light p-8 md:p-12">
+              <h3 className="text-2xl font-bold text-white">
+                Frank Oetlinger
+              </h3>
+              <p className="mt-1 text-sm text-accent">
+                Founder & CEO
+              </p>
+
+              <div className="mt-6 space-y-4 text-base leading-relaxed text-silver">
                 <p>
-                  In 1995, Frank Oetlinger was running{" "}
-                  <span className="text-white">Blanking Systems</span>, serving
-                  high-speed presses processing folded carton blanks at four
-                  sheets per second. The problem: production lines suffered
-                  constant shutdowns because structural components{" "}
-                  <span className="text-white">
-                    kept vibrating loose
-                  </span>
-                  .
+                  In 1995, Frank was running <span className="text-white">Blanking Systems</span>,
+                  serving high-speed presses when he identified a critical
+                  problem: structural components kept{" "}
+                  <span className="text-white">vibrating loose</span>.
                 </p>
                 <p>
-                  Every framing system on the market relied on{" "}
-                  <span className="text-white">friction</span> to hold joints
-                  together. Frank realized that was fundamentally wrong. Friction
-                  fails. Always.
+                  Every framing system relied on friction. Frank realized that
+                  was fundamentally wrong. Friction fails. Always.
                 </p>
                 <p>
-                  So he invented something different: a joint that uses{" "}
+                  So he invented a joint that uses{" "}
                   <span className="text-accent">
                     angled contact planes to create a mechanical lock
                   </span>{" "}
-                  &mdash; one that actually tightens under vibration instead of
-                  loosening. The bolt stretches like a spring and snaps the
-                  connection back into place.
+                  — one that tightens under vibration instead of loosening.
                 </p>
                 <p>
                   Three decades and{" "}
                   <span className="text-white">150 personal patents</span>{" "}
-                  later, that insight has become AngleLock: a complete
-                  structural aluminum system protected by{" "}
-                  <span className="text-white">
-                    100+ patents across 10+ countries
-                  </span>
-                  , validated by Boeing, Disney, Rockwell Automation, and
-                  Snap-on.
+                  later, that insight has become AngleLock.
                 </p>
               </div>
 
               {/* Timeline */}
-              <div className="mt-12 grid gap-4 sm:grid-cols-2 md:grid-cols-4">
+              <div className="mt-8 grid gap-4 sm:grid-cols-2 md:grid-cols-4">
                 {[
                   { year: "1995", event: "Vibration problem identified" },
                   { year: "2010", event: "AngleLock concept prototyped" },
                   { year: "2017", event: "Controlled Dynamics founded" },
-                  { year: "2024", event: "Arrow-1 AI gantry launched" },
+                  { year: "2024", event: "Arrow-1 gantry launched" },
                 ].map((item) => (
                   <div
                     key={item.year}
@@ -368,231 +692,16 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="section-divider" />
-
-      {/* ========== PROOF ========== */}
-      <section id="proof" className="py-32 px-6">
-        <div className="mx-auto max-w-6xl">
-          <SectionReveal>
-            <p className="text-sm tracking-[0.4em] text-accent uppercase">
-              The Proof
-            </p>
-            <h2 className="mt-4 text-4xl font-bold leading-tight text-white md:text-5xl">
-              Don&apos;t Take Our
-              <br />
-              <span className="text-gradient">Word For It</span>
-            </h2>
-          </SectionReveal>
-
-          {/* Testimonial */}
-          <SectionReveal delay={0.1}>
-            <div className="mt-16 rounded-2xl border border-accent/20 bg-surface p-8 glow-blue md:p-12">
-              <Quote className="h-10 w-10 text-accent/30" />
-              <blockquote className="mt-4 text-xl leading-relaxed text-white md:text-2xl">
-                &ldquo;AngleLock is without question the strongest, most stable,
-                and most versatile framing system in the business.&rdquo;
-              </blockquote>
-              <p className="mt-6 text-sm text-silver-dim">
-                <span className="font-semibold text-silver">
-                  Greg Gernert
-                </span>{" "}
-                &mdash; VP & GM, Rockwell Automation
-              </p>
-            </div>
-          </SectionReveal>
-
-          {/* Case studies grid */}
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            <SectionReveal>
-              <CaseStudyCard
-                title="Satellite Assembly Platform"
-                metric="<5 micron"
-                metricLabel="deflection under 2,000 lbs"
-                detail="12'x20' platform, reconfigured 8 times in 3 years, zero maintenance"
-                industry="Aerospace"
-              />
-            </SectionReveal>
-            <SectionReveal delay={0.1}>
-              <CaseStudyCard
-                title="Wafer Inspection System"
-                metric="0.3 micron"
-                metricLabel="vibration (70% below spec)"
-                detail="Installed in 36 hours, 24/7 operation for 2+ years, zero adjustments"
-                industry="Semiconductor"
-              />
-            </SectionReveal>
-            <SectionReveal delay={0.2}>
-              <CaseStudyCard
-                title="Automotive Cobot Cell"
-                metric="45 min"
-                metricLabel="reconfiguration (was 8 hours)"
-                detail="Calibration maintained through 50+ reconfigurations, 12 product families"
-                industry="Robotics"
-              />
-            </SectionReveal>
-            <SectionReveal delay={0.3}>
-              <CaseStudyCard
-                title="CNC Mill Base"
-                metric="8,000 lbs"
-                metricLabel="with zero deflection"
-                detail="40% reduction in part rejections, relocated 4 times in 2 years"
-                industry="Manufacturing"
-              />
-            </SectionReveal>
-          </div>
-
-          {/* Client logos */}
-          <SectionReveal>
-            <div className="mt-16 text-center">
-              <p className="text-sm tracking-wider text-silver-dim uppercase">
-                Trusted by industry leaders
-              </p>
-              <div className="mt-8 flex flex-wrap items-center justify-center gap-12 text-2xl font-bold tracking-wider text-silver-dim/40">
-                <span>DISNEY</span>
-                <span>BOEING</span>
-                <span>SNAP-ON</span>
-                <span>ROCKWELL</span>
-                <span>MILWAUKEE</span>
-              </div>
-            </div>
-          </SectionReveal>
-
-          <SectionReveal>
-            <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <a
-                href="https://controlleddynamicsinc.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm text-accent transition-colors hover:text-accent-bright"
-              >
-                View detailed case studies at Controlled Dynamics
-                <ExternalLink className="h-4 w-4" />
-              </a>
-              <span className="hidden text-silver-dim sm:inline">&middot;</span>
-              <a
-                href="https://anglelock.com/testingdata"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm text-accent transition-colors hover:text-accent-bright"
-              >
-                View testing data & specifications
-                <ExternalLink className="h-4 w-4" />
-              </a>
-            </div>
-          </SectionReveal>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
-      {/* ========== ECOSYSTEM ========== */}
+      {/* ========== CONTACT ========== */}
       <section className="py-32 px-6">
-        <div className="mx-auto max-w-5xl">
-          <SectionReveal>
-            <p className="text-sm tracking-[0.4em] text-accent uppercase text-center">
-              The Ecosystem
-            </p>
-            <h2 className="mt-4 text-4xl font-bold leading-tight text-white text-center md:text-5xl">
-              Three Pillars
-            </h2>
-          </SectionReveal>
-
-          <div className="mt-16 grid gap-6 md:grid-cols-3">
-            <SectionReveal>
-              <a
-                href="https://anglelock.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group block rounded-2xl border border-border bg-surface p-8 transition-all hover:border-accent/30"
-              >
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10">
-                  <Target className="h-6 w-6 text-accent" />
-                </div>
-                <h3 className="mt-6 text-lg font-semibold text-white">
-                  AngleLock
-                </h3>
-                <p className="mt-1 text-xs tracking-wider text-accent uppercase">
-                  anglelock.com
-                </p>
-                <p className="mt-4 text-sm leading-relaxed text-silver-dim">
-                  The patented components: profiles, brackets, hardware, and
-                  motion systems. Full product catalog, testing data, and
-                  technical specifications.
-                </p>
-                <div className="mt-4 flex items-center gap-1 text-sm text-accent transition-colors group-hover:text-accent-bright">
-                  Explore components <ArrowRight className="h-4 w-4" />
-                </div>
-              </a>
-            </SectionReveal>
-
-            <SectionReveal delay={0.1}>
-              <a
-                href="https://controlleddynamicsinc.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group block rounded-2xl border border-border bg-surface p-8 transition-all hover:border-accent/30"
-              >
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10">
-                  <Factory className="h-6 w-6 text-accent" />
-                </div>
-                <h3 className="mt-6 text-lg font-semibold text-white">
-                  Controlled Dynamics
-                </h3>
-                <p className="mt-1 text-xs tracking-wider text-accent uppercase">
-                  controlleddynamicsinc.com
-                </p>
-                <p className="mt-4 text-sm leading-relaxed text-silver-dim">
-                  Custom-engineered automation solutions built on AngleLock.
-                  Machine bases, enclosures, cleanroom systems, and turnkey
-                  integration.
-                </p>
-                <div className="mt-4 flex items-center gap-1 text-sm text-accent transition-colors group-hover:text-accent-bright">
-                  View solutions <ArrowRight className="h-4 w-4" />
-                </div>
-              </a>
-            </SectionReveal>
-
-            <SectionReveal delay={0.2}>
-              <div className="rounded-2xl border border-border bg-surface p-8">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10">
-                  <Rocket className="h-6 w-6 text-accent" />
-                </div>
-                <h3 className="mt-6 text-lg font-semibold text-white">
-                  Arrow-1
-                </h3>
-                <p className="mt-1 text-xs tracking-wider text-accent uppercase">
-                  Industry 4.0 Gantry
-                </p>
-                <p className="mt-4 text-sm leading-relaxed text-silver-dim">
-                  World&apos;s first 7th Axis Linear Shaft Motor Gantry. Zero
-                  maintenance, Edge-to-Cloud AI analytics, works underwater.
-                  Built on AngleLock framing.
-                </p>
-                <p className="mt-4 text-xs text-silver-dim">
-                  Launched at Automate 2024, Chicago
-                </p>
-              </div>
-            </SectionReveal>
-          </div>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
-      {/* ========== CONTACT / CTA ========== */}
-      <section id="contact" className="py-32 px-6">
         <div className="mx-auto max-w-3xl text-center">
           <SectionReveal>
             <p className="text-sm tracking-[0.4em] text-accent uppercase">
-              Get In Touch
+              Investment Inquiries
             </p>
             <h2 className="mt-4 text-4xl font-bold leading-tight text-white md:text-5xl">
               Ready to Learn More?
             </h2>
-            <p className="mt-6 text-lg text-silver-dim">
-              Whether you&apos;re an investor, strategic partner, or enterprise
-              buyer, we&apos;d love to show you what AngleLock can do.
-            </p>
           </SectionReveal>
 
           <SectionReveal delay={0.1}>
@@ -628,104 +737,10 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-
-              <div className="section-divider my-8" />
-
-              <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-                <a
-                  href="mailto:info@anglelock.com?subject=Investor%20Inquiry%20-%20AngleLock%20LLC"
-                  className="rounded-full bg-accent px-8 py-4 text-sm font-semibold tracking-wider text-white uppercase transition-all hover:bg-accent-bright hover:shadow-lg hover:shadow-accent/25"
-                >
-                  Investor Inquiry
-                </a>
-                <a
-                  href="mailto:sales@anglelock.com?subject=Partnership%20Inquiry"
-                  className="rounded-full border border-border px-8 py-4 text-sm font-semibold tracking-wider text-silver uppercase transition-all hover:border-silver-dim hover:text-white"
-                >
-                  Partnership Inquiry
-                </a>
-              </div>
             </div>
           </SectionReveal>
         </div>
       </section>
     </main>
-  );
-}
-
-/* ========== SUB-COMPONENTS ========== */
-
-function X({ className }: { className?: string }) {
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-    >
-      <path d="M18 6L6 18M6 6l12 12" />
-    </svg>
-  );
-}
-
-function ComparisonRow({
-  label,
-  old,
-  new_,
-  improvement,
-}: {
-  label: string;
-  old: string;
-  new_: string;
-  improvement: string;
-}) {
-  return (
-    <div className="rounded-xl border border-border bg-surface p-5">
-      <div className="text-xs tracking-wider text-silver-dim uppercase">
-        {label}
-      </div>
-      <div className="mt-3 flex items-end justify-between">
-        <div>
-          <span className="text-sm text-silver-dim line-through">{old}</span>
-          <span className="mx-3 text-silver-dim">&rarr;</span>
-          <span
-            className="text-lg font-bold text-white"
-            dangerouslySetInnerHTML={{ __html: new_ }}
-          />
-        </div>
-        <span className="rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">
-          {improvement}
-        </span>
-      </div>
-    </div>
-  );
-}
-
-function CaseStudyCard({
-  title,
-  metric,
-  metricLabel,
-  detail,
-  industry,
-}: {
-  title: string;
-  metric: string;
-  metricLabel: string;
-  detail: string;
-  industry: string;
-}) {
-  return (
-    <div className="rounded-2xl border border-border bg-surface p-8 transition-all hover:border-accent/20">
-      <span className="rounded-full bg-accent/10 px-3 py-1 text-xs font-medium text-accent">
-        {industry}
-      </span>
-      <h3 className="mt-4 text-lg font-semibold text-white">{title}</h3>
-      <div className="mt-4">
-        <span className="text-3xl font-bold text-accent">{metric}</span>
-        <span className="ml-2 text-sm text-silver-dim">{metricLabel}</span>
-      </div>
-      <p className="mt-3 text-sm leading-relaxed text-silver-dim">{detail}</p>
-    </div>
   );
 }
