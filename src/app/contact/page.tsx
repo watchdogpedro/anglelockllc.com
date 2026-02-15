@@ -62,12 +62,29 @@ export default function ContactPage() {
     }
 
     try {
-      // TODO: Replace with your actual contact form endpoint
-      // For now, using console.log as placeholder
-      console.log("Contact form submission:", formData);
+      // Send data to Google Sheets via Apps Script
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbyj2iM0KJ2oB6-_S7q9JC7PtzAot9HJgnw5PxXPIECXHWbfvp1RrTqkh92JH4FpY0cQQg/exec",
+        {
+          method: "POST",
+          mode: "no-cors", // Required for Google Apps Script
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            company: formData.company,
+            phone: formData.phone,
+            website: formData.website,
+            notes: formData.notes,
+            formType: "Contact Form", // Distinguish from lead downloads
+          }),
+        }
+      );
 
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      // Note: no-cors mode means we can't read the response,
+      // but the data will be saved to Google Sheets and email sent
 
       setIsSuccess(true);
       setFormData({

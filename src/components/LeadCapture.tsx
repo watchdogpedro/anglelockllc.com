@@ -30,6 +30,7 @@ export default function LeadCapture() {
             name,
             email,
             company,
+            formType: "Lead Download", // Distinguish from contact form
           }),
         }
       );
