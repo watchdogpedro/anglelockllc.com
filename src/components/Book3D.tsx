@@ -60,12 +60,16 @@ export default function Book3D() {
           position: relative;
           transform-style: preserve-3d;
           transform: rotateY(-25deg) rotateX(5deg);
-          transition: transform 0.8s ease;
+          transition: transform 0.8s ease, filter 0.4s ease;
           animation: float 6s ease-in-out infinite;
+          filter: drop-shadow(0 10px 30px rgba(59, 130, 246, 0.2));
         }
 
         .book:hover {
           transform: rotateY(-15deg) rotateX(2deg) scale(1.05);
+          filter: drop-shadow(0 20px 60px rgba(59, 130, 246, 0.7))
+                  drop-shadow(0 0 40px rgba(59, 130, 246, 0.5));
+          animation-play-state: paused;
         }
 
         @keyframes float {
@@ -90,6 +94,15 @@ export default function Book3D() {
             inset 0 0 60px rgba(0, 0, 0, 0.2),
             inset 0 0 2px rgba(255, 255, 255, 0.3);
           overflow: hidden;
+          transition: box-shadow 0.4s ease;
+        }
+
+        .book:hover .book-cover {
+          box-shadow:
+            0 0 50px rgba(59, 130, 246, 0.8),
+            0 0 100px rgba(59, 130, 246, 0.4),
+            inset 0 0 60px rgba(0, 0, 0, 0.2),
+            inset 0 0 4px rgba(255, 255, 255, 0.5);
         }
 
         .book-cover::before {
