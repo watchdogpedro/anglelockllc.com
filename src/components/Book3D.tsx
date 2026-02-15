@@ -52,6 +52,32 @@ export default function Book3D() {
         .book-container {
           perspective: 2000px;
           transform-style: preserve-3d;
+          position: relative;
+        }
+
+        .book-container::before {
+          content: '';
+          position: absolute;
+          width: 280px;
+          height: 380px;
+          background: radial-gradient(
+            ellipse at center,
+            rgba(59, 130, 246, 0.4) 0%,
+            rgba(59, 130, 246, 0.2) 40%,
+            transparent 70%
+          );
+          transform: rotateY(-25deg) rotateX(5deg) translateZ(-50px);
+          transform-style: preserve-3d;
+          transition: opacity 0.4s ease, transform 0.8s ease;
+          opacity: 0.5;
+          filter: blur(20px);
+          pointer-events: none;
+        }
+
+        .book-container:hover::before {
+          opacity: 1;
+          transform: rotateY(-15deg) rotateX(2deg) translateZ(-50px) scale(1.3);
+          filter: blur(30px);
         }
 
         .book {
@@ -60,15 +86,12 @@ export default function Book3D() {
           position: relative;
           transform-style: preserve-3d;
           transform: rotateY(-25deg) rotateX(5deg);
-          transition: transform 0.8s ease, filter 0.4s ease;
+          transition: transform 0.8s ease;
           animation: float 6s ease-in-out infinite;
-          filter: drop-shadow(0 10px 30px rgba(59, 130, 246, 0.2));
         }
 
-        .book:hover {
+        .book-container:hover .book {
           transform: rotateY(-15deg) rotateX(2deg) scale(1.05);
-          filter: drop-shadow(0 20px 60px rgba(59, 130, 246, 0.7))
-                  drop-shadow(0 0 40px rgba(59, 130, 246, 0.5));
           animation-play-state: paused;
         }
 
@@ -94,15 +117,6 @@ export default function Book3D() {
             inset 0 0 60px rgba(0, 0, 0, 0.2),
             inset 0 0 2px rgba(255, 255, 255, 0.3);
           overflow: hidden;
-          transition: box-shadow 0.4s ease;
-        }
-
-        .book:hover .book-cover {
-          box-shadow:
-            0 0 50px rgba(59, 130, 246, 0.8),
-            0 0 100px rgba(59, 130, 246, 0.4),
-            inset 0 0 60px rgba(0, 0, 0, 0.2),
-            inset 0 0 4px rgba(255, 255, 255, 0.5);
         }
 
         .book-cover::before {
