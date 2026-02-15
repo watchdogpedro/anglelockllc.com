@@ -58,26 +58,31 @@ export default function Book3D() {
         .book-container::before {
           content: '';
           position: absolute;
-          width: 280px;
-          height: 380px;
+          width: 450px;
+          height: 550px;
+          left: 50%;
+          top: 50%;
+          margin-left: -225px;
+          margin-top: -275px;
           background: radial-gradient(
             ellipse at center,
-            rgba(59, 130, 246, 0.4) 0%,
-            rgba(59, 130, 246, 0.2) 40%,
+            rgba(59, 130, 246, 0.6) 0%,
+            rgba(59, 130, 246, 0.4) 30%,
+            rgba(59, 130, 246, 0.2) 50%,
             transparent 70%
           );
           transform: rotateY(-25deg) rotateX(5deg) translateZ(-50px);
           transform-style: preserve-3d;
           transition: opacity 0.4s ease, transform 0.8s ease;
-          opacity: 0.5;
-          filter: blur(20px);
+          opacity: 0.6;
+          filter: blur(40px);
           pointer-events: none;
         }
 
         .book-container:hover::before {
           opacity: 1;
-          transform: rotateY(-15deg) rotateX(2deg) translateZ(-50px) scale(1.3);
-          filter: blur(30px);
+          transform: rotateY(-15deg) rotateX(2deg) translateZ(-50px) scale(1.2);
+          filter: blur(50px);
         }
 
         .book {
