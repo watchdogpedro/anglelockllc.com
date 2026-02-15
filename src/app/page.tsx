@@ -2,6 +2,7 @@ import AnimatedCounter from "@/components/AnimatedCounter";
 import SectionReveal from "@/components/SectionReveal";
 import IndustryCarousel from "@/components/IndustryCarousel";
 import LeadCapture from "@/components/LeadCapture";
+import Book3D from "@/components/Book3D";
 import {
   Shield,
   Zap,
@@ -721,20 +722,30 @@ export default function Home() {
 
       {/* ========== LEAD CAPTURE - MARKET REPORT ========== */}
       <section className="py-32 px-6">
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-7xl">
           <SectionReveal>
-            <p className="text-center text-sm tracking-[0.4em] text-accent uppercase">
-              Investment Materials
-            </p>
-            <h2 className="mt-4 text-center text-4xl font-bold leading-tight text-white md:text-5xl">
-              Download Market
-              <br />
-              <span className="text-gradient">Opportunity Report</span>
-            </h2>
-            <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-relaxed text-silver-dim">
-              Get comprehensive analysis of the $47B market opportunity,
-              competitive landscape, and financial projections.
-            </p>
+            <div className="flex items-center justify-between gap-8">
+              {/* Left: Text */}
+              <div className="flex-1">
+                <p className="text-sm tracking-[0.4em] text-accent uppercase">
+                  Investment Materials
+                </p>
+                <h2 className="mt-4 text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
+                  Download Market
+                  <br />
+                  <span className="text-gradient">Opportunity Report</span>
+                </h2>
+                <p className="mt-6 max-w-2xl text-lg leading-relaxed text-silver-dim">
+                  Get comprehensive analysis of the $47B market opportunity,
+                  competitive landscape, and financial projections.
+                </p>
+              </div>
+
+              {/* Right: 3D Book */}
+              <div className="hidden lg:block flex-shrink-0">
+                <Book3D />
+              </div>
+            </div>
           </SectionReveal>
 
           <SectionReveal delay={0.1}>
