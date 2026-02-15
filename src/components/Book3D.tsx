@@ -1,9 +1,21 @@
 "use client";
 
 export default function Book3D() {
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/documents/Market_Opportunity_Report_2025.pdf";
+    link.download = "AngleLock_Market_Opportunity_Report_2025.pdf";
+    link.click();
+  };
+
   return (
     <div className="flex items-center justify-center p-8">
-      <div className="book-container">
+      <button
+        onClick={handleDownload}
+        className="book-container-button"
+        aria-label="Download Market Opportunity Report"
+      >
+        <div className="book-container">
         <div className="book">
           {/* Book Cover */}
           <div className="book-cover">
@@ -46,9 +58,22 @@ export default function Book3D() {
             <div className="page" />
           </div>
         </div>
-      </div>
+        </div>
+      </button>
 
       <style jsx>{`
+        .book-container-button {
+          background: none;
+          border: none;
+          padding: 0;
+          cursor: pointer;
+          transition: transform 0.3s ease;
+        }
+
+        .book-container-button:hover {
+          transform: scale(1.02);
+        }
+
         .book-container {
           perspective: 2000px;
           transform-style: preserve-3d;
@@ -60,12 +85,16 @@ export default function Book3D() {
           position: relative;
           transform-style: preserve-3d;
           transform: rotateY(-25deg) rotateX(5deg);
-          transition: transform 0.8s ease;
+          transition: transform 0.8s ease, filter 0.3s ease;
           animation: float 6s ease-in-out infinite;
+          filter: drop-shadow(0 10px 30px rgba(59, 130, 246, 0.2));
         }
 
-        .book:hover {
+        .book-container-button:hover .book {
           transform: rotateY(-15deg) rotateX(2deg) scale(1.05);
+          filter: drop-shadow(0 20px 60px rgba(59, 130, 246, 0.6))
+                  drop-shadow(0 0 40px rgba(59, 130, 246, 0.4));
+          animation-play-state: paused;
         }
 
         @keyframes float {
@@ -90,6 +119,15 @@ export default function Book3D() {
             inset 0 0 60px rgba(0, 0, 0, 0.2),
             inset 0 0 2px rgba(255, 255, 255, 0.3);
           overflow: hidden;
+          transition: box-shadow 0.3s ease;
+        }
+
+        .book-container-button:hover .book-cover {
+          box-shadow:
+            0 0 40px rgba(59, 130, 246, 0.8),
+            0 0 80px rgba(59, 130, 246, 0.4),
+            inset 0 0 60px rgba(0, 0, 0, 0.2),
+            inset 0 0 2px rgba(255, 255, 255, 0.4);
         }
 
         .book-cover::before {
