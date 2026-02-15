@@ -10,7 +10,7 @@ const navLinks = [
   { href: "#inventor", label: "The Inventor" },
   { href: "#proof", label: "Proof" },
   { href: "/videos", label: "Videos" },
-  { href: "#contact", label: "Contact" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function Navigation() {
@@ -42,7 +42,7 @@ export default function Navigation() {
             </Link>
           ))}
           <Link
-            href="#contact"
+            href="/contact"
             className="rounded-full bg-accent px-5 py-2 text-sm font-medium text-white transition-all hover:bg-accent-bright"
           >
             Investor Inquiry
@@ -74,7 +74,7 @@ export default function Navigation() {
               </Link>
             ))}
             <Link
-              href="#contact"
+              href="/contact"
               className="mt-2 rounded-full bg-accent px-5 py-3 text-center text-sm font-medium text-white"
               onClick={() => setMobileOpen(false)}
             >
