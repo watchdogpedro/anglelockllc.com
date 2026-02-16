@@ -10,6 +10,7 @@ const navLinks = [
   { href: "/about", label: "About" },
   { href: "#proof", label: "Proof" },
   { href: "/videos", label: "Videos" },
+  { href: "/investors", label: "Investors", highlight: true },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -36,17 +37,15 @@ export default function Navigation() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm text-silver-dim transition-colors hover:text-white"
+              className={
+                link.highlight
+                  ? "text-sm font-semibold text-accent transition-colors hover:text-accent-bright"
+                  : "text-sm text-silver-dim transition-colors hover:text-white"
+              }
             >
               {link.label}
             </Link>
           ))}
-          <Link
-            href="/contact"
-            className="rounded-full bg-accent px-5 py-2 text-sm font-medium text-white transition-all hover:bg-accent-bright"
-          >
-            Investor Inquiry
-          </Link>
         </div>
 
         {/* Mobile toggle */}
@@ -67,19 +66,16 @@ export default function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-lg text-silver-dim transition-colors hover:text-white"
+                className={
+                  link.highlight
+                    ? "text-lg font-semibold text-accent"
+                    : "text-lg text-silver-dim transition-colors hover:text-white"
+                }
                 onClick={() => setMobileOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/contact"
-              className="mt-2 rounded-full bg-accent px-5 py-3 text-center text-sm font-medium text-white"
-              onClick={() => setMobileOpen(false)}
-            >
-              Investor Inquiry
-            </Link>
           </div>
         </div>
       )}

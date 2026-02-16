@@ -1,0 +1,106 @@
+Subject: Investor Data Room Document List - Approval Needed
+
+Hi Frank,
+
+The new investor data room is ready (anglelockllc.com/investors). Before going live, I need your approval on which documents to include.
+
+Here's the full list (21 documents):
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+EXECUTIVE MATERIALS (3)
+1. Investor Deck (30 slides - market, tech, traction, financials)
+2. Executive Summary (1-page overview)
+3. Investment Memo (detailed thesis)
+
+FINANCIAL DATA (4)
+4. Financial Model (3-5 year projections)
+5. Historical Financials (2020-2025 actuals)
+6. Unit Economics (CAC, LTV, margins)
+7. Use of Funds ($10M deployment plan)
+
+MARKET ANALYSIS (3)
+8. Market Size Analysis (TAM/SAM/SOM)
+9. Competitive Landscape (vs 8020, Bosch, Vention)
+10. Industry Trends (CHIPS Act, reshoring)
+
+CUSTOMERS & TRACTION (4)
+11. Customer List (Top 20 with revenue)
+12. Case Studies (Disney, TSMC, Boston Dynamics)
+13. Customer Contracts - Redacted (samples)
+14. Sales Pipeline (current opportunities)
+
+INTELLECTUAL PROPERTY (3)
+15. Patent Portfolio (full 150+ patent list)
+16. Core Patents Summary (lock mechanism)
+17. Freedom to Operate (IP clearance)
+
+COMPANY & GOVERNANCE (4)
+18. Capitalization Table (ownership structure) - SENSITIVE
+19. Team Bios (leadership backgrounds)
+20. Board Materials (recent deck/minutes) - SENSITIVE
+21. Legal Documents (incorporation, bylaws) - SENSITIVE
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+MY RECOMMENDATION:
+
+Start with these 8 MUST-HAVE documents:
+✓ Investor Deck
+✓ Executive Summary
+✓ Financial Model
+✓ Historical Financials
+✓ Use of Funds
+✓ Customer List
+✓ Patent Portfolio
+✓ Team Bios
+
+Set these to "AVAILABLE ON REQUEST" (don't auto-download):
+⚠ Capitalization Table
+⚠ Board Materials
+⚠ Legal Documents
+⚠ Customer Contracts
+
+Set the rest to "COMING SOON" (add later as needed):
+⏳ Investment Memo
+⏳ Unit Economics
+⏳ Market Size Analysis
+⏳ Competitive Landscape
+⏳ Industry Trends
+⏳ Case Studies
+⏳ Sales Pipeline
+⏳ Core Patents Summary
+⏳ Freedom to Operate
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+QUESTIONS FOR YOU:
+
+1. Does this list make sense? Any additions/removals?
+
+2. Are you comfortable sharing customer names in "Customer List"?
+   (Can anonymize as "Major Semiconductor Manufacturer" etc.)
+
+3. Who will create these documents?
+   - You + team?
+   - Me (for formatting/design)?
+   - Outside consultant?
+
+4. Timeline?
+   - 1 week for must-haves?
+   - 2-3 weeks for everything?
+
+5. What can't we share?
+   - Specific customer contract terms?
+   - Exact cap table details?
+   - Board meeting details?
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Let me know your thoughts and I'll proceed accordingly.
+
+Thanks,
+Paul
+
+P.S. Full detailed list with checkboxes saved at:
+/Users/pauldenman/anglelockllc.com/INVESTOR-DATA-ROOM-DOCUMENT-LIST.md
