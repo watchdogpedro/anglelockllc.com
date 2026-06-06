@@ -229,6 +229,50 @@ export default function AboutPage() {
             </SectionReveal>
           </div>
         </section>
+
+        {/* ========== PATENTS ========== */}
+        <section id="patents" className="border-t border-border py-20">
+          <div className="mx-auto max-w-7xl px-6">
+            <SectionReveal>
+              <p className="mb-4 text-sm tracking-[0.4em] text-accent uppercase">
+                Intellectual Property
+              </p>
+              <h2 className="text-3xl font-black tracking-tight text-white md:text-4xl">
+                150+ PATENTS WORLDWIDE
+              </h2>
+              <p className="mt-4 max-w-2xl text-lg text-silver-dim">
+                AngleLock&apos;s patented mechanical locking system is protected across 12+ countries,
+                covering both utility innovations and design elements of our modular framing system.
+              </p>
+            </SectionReveal>
+
+            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                { region: "United States", count: "50+ patents" },
+                { region: "Germany", count: "10 patents" },
+                { region: "Japan", count: "10 patents" },
+                { region: "China", count: "8 patents" },
+                { region: "United Kingdom", count: "9 patents" },
+                { region: "Australia", count: "6 patents" },
+                { region: "Canada", count: "5 patents" },
+                { region: "France, Spain, Italy, Korea, Austria, Switzerland, Hong Kong", count: "Additional registrations" },
+              ].map((p) => (
+                <SectionReveal key={p.region}>
+                  <div className="rounded-xl border border-border bg-surface p-4">
+                    <p className="text-sm font-bold text-white">{p.region}</p>
+                    <p className="mt-1 text-sm text-accent">{p.count}</p>
+                  </div>
+                </SectionReveal>
+              ))}
+            </div>
+
+            <SectionReveal>
+              <p className="mt-8 text-sm text-silver-dim">
+                PCT (Patent Cooperation Treaty): 8 international applications. Contact us for IP licensing inquiries.
+              </p>
+            </SectionReveal>
+          </div>
+        </section>
       </main>
       <Footer />
     </>
