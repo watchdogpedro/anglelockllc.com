@@ -1,10 +1,11 @@
+// src/components/Footer.tsx
 import Link from "next/link";
 
 export default function Footer() {
   return (
     <footer className="border-t border-border bg-background">
       <div className="mx-auto max-w-7xl px-6 py-16">
-        <div className="grid gap-12 md:grid-cols-4">
+        <div className="grid gap-12 md:grid-cols-6">
           {/* Brand */}
           <div className="md:col-span-1">
             <h3 className="text-lg font-bold tracking-wider text-white">
@@ -83,6 +84,57 @@ export default function Footer() {
               >
                 Videos
               </Link>
+            </div>
+          </div>
+
+          {/* Products */}
+          <div>
+            <h4 className="mb-4 text-sm font-semibold tracking-wider text-white uppercase">
+              Products
+            </h4>
+            <div className="flex flex-col gap-3">
+              {[
+                { label: "Profiles", href: "/products/profiles" },
+                { label: "Components", href: "/products/components" },
+                { label: "Hardware", href: "/products/hardware" },
+                { label: "Accessories", href: "/products/accessories" },
+                { label: "Doors & Floors", href: "/products/doors-and-floors" },
+                { label: "Motion", href: "/products/motion" },
+              ].map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm text-silver-dim transition-colors hover:text-accent"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h4 className="mb-4 text-sm font-semibold tracking-wider text-white uppercase">
+              Company
+            </h4>
+            <div className="flex flex-col gap-3">
+              {[
+                { label: "About", href: "/about" },
+                { label: "Industries", href: "/industries" },
+                { label: "Custom Designs", href: "/custom-designs" },
+                { label: "Testing Data", href: "/testing" },
+                { label: "Literature", href: "/resources/literature" },
+                { label: "Investors", href: "/investors" },
+                { label: "Contact", href: "/contact" },
+              ].map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm text-silver-dim transition-colors hover:text-accent"
+                >
+                  {link.label}
+                </Link>
+              ))}
             </div>
           </div>
 
