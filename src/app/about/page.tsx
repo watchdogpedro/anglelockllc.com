@@ -1,3 +1,4 @@
+// src/app/about/page.tsx
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SectionReveal from "@/components/SectionReveal";
@@ -232,7 +233,7 @@ export default function AboutPage() {
 
         {/* ========== PATENTS ========== */}
         <section id="patents" className="border-t border-border py-20">
-          <div className="mx-auto max-w-7xl px-6">
+          <div className="container mx-auto max-w-7xl px-6">
             <SectionReveal>
               <p className="mb-4 text-sm tracking-[0.4em] text-accent uppercase">
                 Intellectual Property

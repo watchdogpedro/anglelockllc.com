@@ -137,19 +137,21 @@ export default function Home() {
       {/* ========== CLIENT LOGOS ========== */}
       <section className="border-y border-border py-12">
         <div className="mx-auto max-w-7xl px-6">
-          <p className="mb-8 text-center text-xs tracking-[0.4em] text-silver-dim uppercase">
-            Trusted By Industry Leaders
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-12">
-            {["Boeing", "Disney", "Snap-on", "MSOE", "Milwaukee Tool"].map((brand) => (
-              <span
-                key={brand}
-                className="text-lg font-black tracking-wider text-silver-dim/50 transition-colors hover:text-silver-dim"
-              >
-                {brand}
-              </span>
-            ))}
-          </div>
+          <SectionReveal>
+            <p className="mb-8 text-center text-xs tracking-[0.4em] text-silver-dim uppercase">
+              Trusted By Industry Leaders
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-12">
+              {["Boeing", "Disney", "Snap-on", "MSOE", "Milwaukee Tool"].map((brand) => (
+                <span
+                  key={brand}
+                  className="text-lg font-black tracking-wider text-silver-dim/50 transition-colors hover:text-silver-dim"
+                >
+                  {brand}
+                </span>
+              ))}
+            </div>
+          </SectionReveal>
         </div>
       </section>
 
@@ -173,11 +175,11 @@ export default function Home() {
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
               { label: "Profiles", href: "/products/profiles", count: "24", desc: "Structural extrusion profiles" },
-              { label: "Components", href: "/products/components", count: "46", desc: "Brackets, plates &amp; inserts" },
-              { label: "Hardware", href: "/products/hardware", count: "27", desc: "Nuts, studs &amp; fasteners" },
-              { label: "Accessories", href: "/products/accessories", count: "17", desc: "End caps &amp; cable management" },
-              { label: "Doors &amp; Floors", href: "/products/doors-and-floors", count: "51", desc: "Hinges, casters &amp; panels" },
-              { label: "Motion", href: "/products/motion", count: "12", desc: "Pivots &amp; roller carriages" },
+              { label: "Components", href: "/products/components", count: "46", desc: "Brackets, plates & inserts" },
+              { label: "Hardware", href: "/products/hardware", count: "27", desc: "Nuts, studs & fasteners" },
+              { label: "Accessories", href: "/products/accessories", count: "17", desc: "End caps & cable management" },
+              { label: "Doors & Floors", href: "/products/doors-and-floors", count: "51", desc: "Hinges, casters & panels" },
+              { label: "Motion", href: "/products/motion", count: "12", desc: "Pivots & roller carriages" },
             ].map((cat) => (
               <SectionReveal key={cat.label}>
                 <a
