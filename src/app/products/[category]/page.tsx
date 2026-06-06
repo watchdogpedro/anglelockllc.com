@@ -1,3 +1,4 @@
+// src/app/products/[category]/page.tsx
 import { notFound } from "next/navigation";
 import ProductCard from "@/components/ProductCard";
 import {

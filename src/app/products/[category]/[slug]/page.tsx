@@ -1,3 +1,4 @@
+// src/app/products/[category]/[slug]/page.tsx
 import { notFound } from "next/navigation";
 import ModelViewer from "@/components/ModelViewer";
 import {

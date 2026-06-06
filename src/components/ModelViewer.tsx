@@ -1,3 +1,4 @@
+// src/components/ModelViewer.tsx
 "use client";
 
 interface ModelViewerProps {
