@@ -27,10 +27,12 @@ export default function ResourcesPage() {
         <div className="grid gap-6 md:grid-cols-3">
           {resources.map((r) => (
             <Link key={r.href} href={r.href} className="group rounded-xl border border-border bg-surface p-6 transition-all hover:border-accent/40">
-              <div className="mb-4 text-3xl">{r.icon}</div>
+              <div className="mb-4 text-3xl" aria-hidden="true">{r.icon}</div>
               <h2 className="text-xl font-bold text-white">{r.title}</h2>
               <p className="mt-2 text-sm text-silver-dim">{r.description}</p>
-              <span className="mt-4 inline-block text-sm text-accent group-hover:underline">Explore →</span>
+              <span className="mt-4 inline-block text-sm text-accent group-hover:underline">
+                Explore <span aria-hidden="true">→</span>
+              </span>
             </Link>
           ))}
         </div>

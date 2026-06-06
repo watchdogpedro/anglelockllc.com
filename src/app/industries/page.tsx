@@ -43,7 +43,7 @@ export default function IndustriesPage() {
           ))}
         </div>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-3">
+        <div className="mt-16 flex flex-wrap justify-center gap-8">
           {[
             { client: "Boeing", detail: "Aerospace structural framing" },
             { client: "Disney", detail: "Studio & entertainment structures" },
@@ -51,7 +51,7 @@ export default function IndustriesPage() {
             { client: "MSOE", detail: "Educational research equipment" },
             { client: "Milwaukee Tool", detail: "Manufacturing & automation" },
           ].map((logo) => (
-            <div key={logo.client} className="rounded-xl border border-border bg-surface p-6 text-center">
+            <div key={logo.client} className="w-full sm:w-64 rounded-xl border border-border bg-surface p-6 text-center">
               <p className="text-2xl font-black tracking-wide text-white">{logo.client}</p>
               <p className="mt-1 text-xs text-silver-dim">{logo.detail}</p>
             </div>

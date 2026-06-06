@@ -1,4 +1,5 @@
 // src/app/resources/literature/page.tsx
+import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -40,14 +41,18 @@ export default function LiteraturePage() {
                   href={doc.url}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`Download ${doc.title} (PDF)`}
                   className="ml-4 flex-shrink-0 rounded-lg border border-accent px-4 py-2 text-sm font-medium text-accent hover:bg-accent hover:text-white transition-colors"
                 >
                   Download
                 </a>
               ) : (
-                <span className="ml-4 flex-shrink-0 rounded-lg border border-border px-4 py-2 text-sm text-silver-dim">
+                <a
+                  href="/contact"
+                  className="ml-4 flex-shrink-0 rounded-lg border border-border px-4 py-2 text-sm text-silver-dim hover:text-white"
+                >
                   Contact Us
-                </span>
+                </a>
               )}
             </div>
           ))}
