@@ -1,3 +1,5 @@
+// src/app/products/page.tsx
+
 import Link from "next/link";
 import { PRODUCTS_BY_CATEGORY, CATEGORY_LABELS, CATEGORY_DESCRIPTIONS } from "@/lib/products";
 import type { ProductCategory } from "@/lib/products";

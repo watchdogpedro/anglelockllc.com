@@ -1,3 +1,5 @@
+// src/components/ProductCard.tsx
+
 import Link from "next/link";
 import { CATEGORY_LABELS } from "@/lib/products";
 import type { Product } from "@/lib/products";
