@@ -3,6 +3,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, ChevronDown } from "lucide-react";
 
 interface NavChild {
@@ -127,15 +128,15 @@ export default function Navigation() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <Link href="/" className="flex items-center gap-3">
-          <div className="flex flex-col">
-            <span className="text-xl font-bold tracking-wider text-white">
-              ANGLELOCK
-            </span>
-            <span className="text-[10px] tracking-[0.3em] text-silver-dim uppercase">
-              Structural Aluminum Systems
-            </span>
-          </div>
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/anglelock-logo.png"
+            alt="AngleLock"
+            width={160}
+            height={40}
+            className="h-10 w-auto"
+            priority
+          />
         </Link>
 
         {/* Desktop nav */}
