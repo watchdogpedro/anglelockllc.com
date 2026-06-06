@@ -134,6 +134,82 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ========== CLIENT LOGOS ========== */}
+      <section className="border-y border-border py-12">
+        <div className="mx-auto max-w-7xl px-6">
+          <p className="mb-8 text-center text-xs tracking-[0.4em] text-silver-dim uppercase">
+            Trusted By Industry Leaders
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-12">
+            {["Boeing", "Disney", "Snap-on", "MSOE", "Milwaukee Tool"].map((brand) => (
+              <span
+                key={brand}
+                className="text-lg font-black tracking-wider text-silver-dim/50 transition-colors hover:text-silver-dim"
+              >
+                {brand}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========== PRODUCT CATEGORIES ========== */}
+      <section className="py-24">
+        <div className="mx-auto max-w-7xl px-6">
+          <SectionReveal>
+            <p className="mb-4 text-sm tracking-[0.4em] text-accent uppercase">
+              Complete System
+            </p>
+            <h2 className="text-3xl font-black tracking-tight text-white md:text-4xl">
+              EVERY COMPONENT.
+              <br />
+              <span className="text-gradient">ONE SYSTEM.</span>
+            </h2>
+            <p className="mt-4 max-w-xl text-lg text-silver-dim">
+              From structural profiles to precision hardware — everything engineered to lock together.
+            </p>
+          </SectionReveal>
+
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { label: "Profiles", href: "/products/profiles", count: "24", desc: "Structural extrusion profiles" },
+              { label: "Components", href: "/products/components", count: "46", desc: "Brackets, plates &amp; inserts" },
+              { label: "Hardware", href: "/products/hardware", count: "27", desc: "Nuts, studs &amp; fasteners" },
+              { label: "Accessories", href: "/products/accessories", count: "17", desc: "End caps &amp; cable management" },
+              { label: "Doors &amp; Floors", href: "/products/doors-and-floors", count: "51", desc: "Hinges, casters &amp; panels" },
+              { label: "Motion", href: "/products/motion", count: "12", desc: "Pivots &amp; roller carriages" },
+            ].map((cat) => (
+              <SectionReveal key={cat.label}>
+                <a
+                  href={cat.href}
+                  className="group flex items-center justify-between rounded-xl border border-border bg-surface p-5 transition-all hover:border-accent/40 hover:bg-surface-light"
+                >
+                  <div>
+                    <p className="font-bold text-white">{cat.label}</p>
+                    <p className="mt-0.5 text-sm text-silver-dim">{cat.desc}</p>
+                  </div>
+                  <div className="text-right">
+                    <p className="text-2xl font-black text-accent">{cat.count}</p>
+                    <p className="text-xs text-silver-dim">products</p>
+                  </div>
+                </a>
+              </SectionReveal>
+            ))}
+          </div>
+
+          <SectionReveal>
+            <div className="mt-8 text-center">
+              <a
+                href="/products"
+                className="inline-block rounded-lg border border-accent px-8 py-3 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
+              >
+                Browse Full Catalog
+              </a>
+            </div>
+          </SectionReveal>
+        </div>
+      </section>
+
       {/* ========== THE OPPORTUNITY ========== */}
       <section className="border-y border-border bg-surface py-32 px-6">
         <div className="mx-auto max-w-6xl">
