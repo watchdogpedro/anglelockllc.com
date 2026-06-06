@@ -1,3 +1,4 @@
+// src/lib/products/accessories.ts
 import type { Product } from './types'
 
 export const accessories: Product[] = [
